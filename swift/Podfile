@@ -1,0 +1,38 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'ImageSearch-watchOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'RxSwift', '6.0.0'
+  pod 'RxCocoa', '6.0.0'
+  pod 'Kingfisher', '~> 6.0'
+  pod 'Alamofire', '~> 5.2'
+
+  # Pods for ImageSearch-watchOS
+
+end
+
+target 'ImageSearch-watchOS WatchKit App' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'RxSwift', '6.0.0'
+  pod 'RxCocoa', '6.0.0'
+  pod 'Kingfisher', '~> 6.0'
+  pod 'Alamofire', '~> 5.2'
+
+  # Pods for ImageSearch-watchOS WatchKit App
+
+end
+
+target 'ImageSearch-watchOS WatchKit Extension' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'RxSwift', '6.0.0'
+  pod 'RxCocoa', '6.0.0'
+  pod 'Kingfisher', '~> 6.0'
+  pod 'Alamofire', '~> 5.2'
+
+  # Pods for ImageSearch-watchOS WatchKit Extension
+
+end

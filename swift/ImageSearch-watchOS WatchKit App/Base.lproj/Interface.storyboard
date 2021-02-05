@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="Search" title="Search" id="AgC-eL-Hgc" customClass="SearchInterfaceController" customModule="ImageSearch_watchOS_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <textField width="1" alignment="left" placeholder="🔎 Search..." id="4dN-4R-KJv">
+                            <connections>
+                                <action selector="textFieldAction:" destination="AgC-eL-Hgc" id="lH3-yp-NgV"/>
+                            </connections>
+                        </textField>
+                        <separator alignment="left" id="6uD-cb-LbS">
+                            <color key="color" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </separator>
+                        <table alignment="left" id="g4f-6r-3Ph">
+                            <items>
+                                <tableRow identifier="ListCell" id="JQF-wO-Zy9" customClass="TableCellObject" customModule="ImageSearch_watchOS_WatchKit_App" customModuleProvider="target">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="10" id="2xt-au-Uac">
+                                        <items>
+                                            <imageView width="30" height="30" alignment="left" verticalAlignment="center" id="Ep0-nG-P8Q"/>
+                                            <group alignment="left" verticalAlignment="center" layout="vertical" id="cZA-xR-d6o">
+                                                <items>
+                                                    <label alignment="left" text="Label" id="Mqn-Sv-BwA">
+                                                        <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                                    </label>
+                                                    <label alignment="left" text="Label" id="m81-5F-dq8">
+                                                        <fontDescription key="font" type="system" weight="thin" pointSize="13"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="imageView" destination="Ep0-nG-P8Q" id="gsr-VL-J1b"/>
+                                        <outlet property="subTitleLabel" destination="m81-5F-dq8" id="bmH-Vg-dgl"/>
+                                        <outlet property="superGroup" destination="2xt-au-Uac" id="ciY-1A-rJo"/>
+                                        <outlet property="titleLabel" destination="Mqn-Sv-BwA" id="dUW-j3-Wrs"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="g4f-6r-3Ph" id="qQC-bs-MU2"/>
+                        <outlet property="textField" destination="4dN-4R-KJv" id="hcn-Jx-ygb"/>
+                        <segue destination="YJ6-dE-e9v" kind="relationship" relationship="nextPage" id="jyL-XB-ujc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="19" y="-20"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="F1p-9v-CmI">
+            <objects>
+                <controller identifier="Detail" id="THg-qt-MrG" customClass="DetailInterfaceController" customModule="ImageSearch_watchOS_WatchKit_Extension">
+                    <items>
+                        <imageView alignment="left" id="QfO-59-dDf"/>
+                        <button width="1" alignment="left" title="Remove from Favorites" id="b4w-Rm-V5b">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.85490196080000003" green="0.086274509799999996" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="removeButtonAction" destination="THg-qt-MrG" id="T6n-qg-Ew2"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="imageView" destination="QfO-59-dDf" id="2w7-td-wXo"/>
+                        <outlet property="removeButton" destination="b4w-Rm-V5b" id="BZr-Zh-cCG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="639" y="-20"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="40O-Et-dgi">
+            <objects>
+                <controller identifier="Favorites" title="Favorites" id="YJ6-dE-e9v" customClass="FavoritesInterfaceController" customModule="ImageSearch_watchOS_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="iiF-xh-T4y">
+                            <items>
+                                <tableRow identifier="ListCell" id="kRc-5G-9P8" customClass="TableCellObject" customModule="ImageSearch_watchOS_WatchKit_App" customModuleProvider="target">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="10" id="AcN-ra-h3U">
+                                        <items>
+                                            <imageView width="30" height="30" alignment="left" verticalAlignment="center" id="6pA-RQ-Uit"/>
+                                            <group alignment="left" layout="vertical" id="dsu-g0-8bP">
+                                                <items>
+                                                    <label alignment="left" text="Label" id="5L7-GZ-4Cd">
+                                                        <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                                    </label>
+                                                    <label alignment="left" text="Label" id="pru-1j-qSs">
+                                                        <fontDescription key="font" type="system" weight="thin" pointSize="13"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="imageView" destination="6pA-RQ-Uit" id="ebp-gY-DfU"/>
+                                        <outlet property="subTitleLabel" destination="pru-1j-qSs" id="c6t-8Q-32X"/>
+                                        <outlet property="superGroup" destination="AcN-ra-h3U" id="HY2-0o-1qO"/>
+                                        <outlet property="titleLabel" destination="5L7-GZ-4Cd" id="GGM-aP-SDN"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="iiF-xh-T4y" id="XdS-ZR-W67"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="340" y="-20"/>
+        </scene>
+    </scenes>
+</document>

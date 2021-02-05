@@ -1,0 +1,907 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0354392EF98950A679AE45E2 /* Pods_ImageSearch_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F83E8C9522000BE604A4DBE /* Pods_ImageSearch_watchOS.framework */; };
+		C1B60A95CE78273061A7133D /* Pods_ImageSearch_watchOS_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F48EBF73A623515CAA5133 /* Pods_ImageSearch_watchOS_WatchKit_App.framework */; };
+		D22DE050E04D1446177EDBDB /* Pods_ImageSearch_watchOS_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 622C55ED60840093263498BC /* Pods_ImageSearch_watchOS_WatchKit_Extension.framework */; };
+		F367A4FB25CDDB480081ED3E /* FavoritesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367A4FA25CDDB480081ED3E /* FavoritesInterfaceController.swift */; };
+		F367A50325CDDB580081ED3E /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367A50225CDDB580081ED3E /* DetailInterfaceController.swift */; };
+		F367A50825CDDDD10081ED3E /* FavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367A50725CDDDD10081ED3E /* FavoritesModel.swift */; };
+		F367A50E25CDDE080081ED3E /* UserDefaults+Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367A50D25CDDE080081ED3E /* UserDefaults+Objects.swift */; };
+		F367A52125CDE9350081ED3E /* FavoritesInterfaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367A52025CDE9350081ED3E /* FavoritesInterfaceModel.swift */; };
+		F367A52B25CDED3E0081ED3E /* WCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367A52A25CDED3E0081ED3E /* WCModel.swift */; };
+		F367A53625CDEE710081ED3E /* WCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367A52A25CDED3E0081ED3E /* WCModel.swift */; };
+		F3C7910B25CD55BC00E3023A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7910A25CD55BC00E3023A /* AppDelegate.swift */; };
+		F3C7910D25CD55BC00E3023A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7910C25CD55BC00E3023A /* SceneDelegate.swift */; };
+		F3C7910F25CD55BC00E3023A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7910E25CD55BC00E3023A /* HistoryViewController.swift */; };
+		F3C7911225CD55BC00E3023A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C7911025CD55BC00E3023A /* Main.storyboard */; };
+		F3C7911425CD55BD00E3023A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C7911325CD55BD00E3023A /* Assets.xcassets */; };
+		F3C7911725CD55BD00E3023A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C7911525CD55BD00E3023A /* LaunchScreen.storyboard */; };
+		F3C7911C25CD55BD00E3023A /* ImageSearch-watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F3C7911B25CD55BD00E3023A /* ImageSearch-watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F3C7912225CD55BD00E3023A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C7912025CD55BD00E3023A /* Interface.storyboard */; };
+		F3C7912425CD55BE00E3023A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C7912325CD55BE00E3023A /* Assets.xcassets */; };
+		F3C7912B25CD55BE00E3023A /* ImageSearch-watchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F3C7912A25CD55BE00E3023A /* ImageSearch-watchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F3C7913025CD55BE00E3023A /* SearchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7912F25CD55BE00E3023A /* SearchInterfaceController.swift */; };
+		F3C7913225CD55BE00E3023A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7913125CD55BE00E3023A /* ExtensionDelegate.swift */; };
+		F3C7913425CD55BE00E3023A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7913325CD55BE00E3023A /* ComplicationController.swift */; };
+		F3C7913625CD55BF00E3023A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C7913525CD55BF00E3023A /* Assets.xcassets */; };
+		F3C7914625CD58AC00E3023A /* TableCellObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7914525CD58AC00E3023A /* TableCellObject.swift */; };
+		F3C7914C25CD601B00E3023A /* SearchInterfaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7914B25CD601B00E3023A /* SearchInterfaceModel.swift */; };
+		F3C7914E25CD602D00E3023A /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7914D25CD602D00E3023A /* SearchModel.swift */; };
+		F3C7915125CDD39700E3023A /* ReceivedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7915025CDD39700E3023A /* ReceivedData.swift */; };
+		F3C7915325CDD3AA00E3023A /* SearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7915225CDD3AA00E3023A /* SearchData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3C7911D25CD55BD00E3023A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C790FF25CD55BB00E3023A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3C7911A25CD55BD00E3023A;
+			remoteInfo = "ImageSearch-watchOS WatchKit App";
+		};
+		F3C7912C25CD55BE00E3023A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C790FF25CD55BB00E3023A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3C7912925CD55BE00E3023A;
+			remoteInfo = "ImageSearch-watchOS WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F3C7913D25CD55BF00E3023A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F3C7912B25CD55BE00E3023A /* ImageSearch-watchOS WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C7914125CD55BF00E3023A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F3C7911C25CD55BD00E3023A /* ImageSearch-watchOS WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		15F48EBF73A623515CAA5133 /* Pods_ImageSearch_watchOS_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSearch_watchOS_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C7F6B3606EE74481360AC1D /* Pods-ImageSearch-watchOS WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch-watchOS WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-ImageSearch-watchOS WatchKit App/Pods-ImageSearch-watchOS WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		389BC08720BC55281A7BD186 /* Pods-ImageSearch-watchOS WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch-watchOS WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-ImageSearch-watchOS WatchKit App/Pods-ImageSearch-watchOS WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		3F83E8C9522000BE604A4DBE /* Pods_ImageSearch_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSearch_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47D6735E90A07079FDF0FC05 /* Pods-ImageSearch-watchOS WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch-watchOS WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-ImageSearch-watchOS WatchKit Extension/Pods-ImageSearch-watchOS WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		5B64862E46EBBD0102B57410 /* Pods-ImageSearch-watchOS WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch-watchOS WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-ImageSearch-watchOS WatchKit Extension/Pods-ImageSearch-watchOS WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		622C55ED60840093263498BC /* Pods_ImageSearch_watchOS_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSearch_watchOS_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68FEF8F0BE918ACAAB50A1CA /* Pods-ImageSearch-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch-watchOS.debug.xcconfig"; path = "Target Support Files/Pods-ImageSearch-watchOS/Pods-ImageSearch-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E8244FC2F14268341ACBA886 /* Pods-ImageSearch-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch-watchOS.release.xcconfig"; path = "Target Support Files/Pods-ImageSearch-watchOS/Pods-ImageSearch-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		F367A4FA25CDDB480081ED3E /* FavoritesInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInterfaceController.swift; sourceTree = "<group>"; };
+		F367A50225CDDB580081ED3E /* DetailInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
+		F367A50725CDDDD10081ED3E /* FavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesModel.swift; sourceTree = "<group>"; };
+		F367A50D25CDDE080081ED3E /* UserDefaults+Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Objects.swift"; sourceTree = "<group>"; };
+		F367A52025CDE9350081ED3E /* FavoritesInterfaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInterfaceModel.swift; sourceTree = "<group>"; };
+		F367A52A25CDED3E0081ED3E /* WCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCModel.swift; sourceTree = "<group>"; };
+		F3C7910725CD55BC00E3023A /* ImageSearch-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ImageSearch-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C7910A25CD55BC00E3023A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3C7910C25CD55BC00E3023A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F3C7910E25CD55BC00E3023A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		F3C7911125CD55BC00E3023A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3C7911325CD55BD00E3023A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3C7911625CD55BD00E3023A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3C7911825CD55BD00E3023A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3C7911B25CD55BD00E3023A /* ImageSearch-watchOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ImageSearch-watchOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C7912125CD55BD00E3023A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F3C7912325CD55BE00E3023A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3C7912525CD55BE00E3023A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3C7912A25CD55BE00E3023A /* ImageSearch-watchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ImageSearch-watchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C7912F25CD55BE00E3023A /* SearchInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInterfaceController.swift; sourceTree = "<group>"; };
+		F3C7913125CD55BE00E3023A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		F3C7913325CD55BE00E3023A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		F3C7913525CD55BF00E3023A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3C7913725CD55BF00E3023A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3C7914525CD58AC00E3023A /* TableCellObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellObject.swift; sourceTree = "<group>"; };
+		F3C7914B25CD601B00E3023A /* SearchInterfaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInterfaceModel.swift; sourceTree = "<group>"; };
+		F3C7914D25CD602D00E3023A /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		F3C7915025CDD39700E3023A /* ReceivedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedData.swift; sourceTree = "<group>"; };
+		F3C7915225CDD3AA00E3023A /* SearchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF35965AF27A8035899314A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B60A95CE78273061A7133D /* Pods_ImageSearch_watchOS_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C7910425CD55BC00E3023A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0354392EF98950A679AE45E2 /* Pods_ImageSearch_watchOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C7912725CD55BE00E3023A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D22DE050E04D1446177EDBDB /* Pods_ImageSearch_watchOS_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E170A70554D149DB98A7DF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68FEF8F0BE918ACAAB50A1CA /* Pods-ImageSearch-watchOS.debug.xcconfig */,
+				E8244FC2F14268341ACBA886 /* Pods-ImageSearch-watchOS.release.xcconfig */,
+				389BC08720BC55281A7BD186 /* Pods-ImageSearch-watchOS WatchKit App.debug.xcconfig */,
+				1C7F6B3606EE74481360AC1D /* Pods-ImageSearch-watchOS WatchKit App.release.xcconfig */,
+				47D6735E90A07079FDF0FC05 /* Pods-ImageSearch-watchOS WatchKit Extension.debug.xcconfig */,
+				5B64862E46EBBD0102B57410 /* Pods-ImageSearch-watchOS WatchKit Extension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		984CBC7A5B512C95F265C780 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F83E8C9522000BE604A4DBE /* Pods_ImageSearch_watchOS.framework */,
+				15F48EBF73A623515CAA5133 /* Pods_ImageSearch_watchOS_WatchKit_App.framework */,
+				622C55ED60840093263498BC /* Pods_ImageSearch_watchOS_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F367A4E925CDDA0F0081ED3E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F367A50225CDDB580081ED3E /* DetailInterfaceController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F367A50C25CDDDFD0081ED3E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F367A50D25CDDE080081ED3E /* UserDefaults+Objects.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F367A52925CDED280081ED3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7914D25CD602D00E3023A /* SearchModel.swift */,
+				F367A50725CDDDD10081ED3E /* FavoritesModel.swift */,
+				F367A52A25CDED3E0081ED3E /* WCModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3C790FE25CD55BB00E3023A = {
+			isa = PBXGroup;
+			children = (
+				F3C7910925CD55BC00E3023A /* ImageSearch-watchOS */,
+				F3C7911F25CD55BD00E3023A /* ImageSearch-watchOS WatchKit App */,
+				F3C7912E25CD55BE00E3023A /* ImageSearch-watchOS WatchKit Extension */,
+				F3C7910825CD55BC00E3023A /* Products */,
+				5E170A70554D149DB98A7DF6 /* Pods */,
+				984CBC7A5B512C95F265C780 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F3C7910825CD55BC00E3023A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7910725CD55BC00E3023A /* ImageSearch-watchOS.app */,
+				F3C7911B25CD55BD00E3023A /* ImageSearch-watchOS WatchKit App.app */,
+				F3C7912A25CD55BE00E3023A /* ImageSearch-watchOS WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3C7910925CD55BC00E3023A /* ImageSearch-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7910A25CD55BC00E3023A /* AppDelegate.swift */,
+				F3C7910C25CD55BC00E3023A /* SceneDelegate.swift */,
+				F3C7910E25CD55BC00E3023A /* HistoryViewController.swift */,
+				F3C7911025CD55BC00E3023A /* Main.storyboard */,
+				F3C7911325CD55BD00E3023A /* Assets.xcassets */,
+				F3C7911525CD55BD00E3023A /* LaunchScreen.storyboard */,
+				F3C7911825CD55BD00E3023A /* Info.plist */,
+			);
+			path = "ImageSearch-watchOS";
+			sourceTree = "<group>";
+		};
+		F3C7911F25CD55BD00E3023A /* ImageSearch-watchOS WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7912025CD55BD00E3023A /* Interface.storyboard */,
+				F3C7912325CD55BE00E3023A /* Assets.xcassets */,
+				F3C7912525CD55BE00E3023A /* Info.plist */,
+			);
+			path = "ImageSearch-watchOS WatchKit App";
+			sourceTree = "<group>";
+		};
+		F3C7912E25CD55BE00E3023A /* ImageSearch-watchOS WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F367A52925CDED280081ED3E /* Model */,
+				F367A50C25CDDDFD0081ED3E /* Extension */,
+				F3C7914F25CDD37E00E3023A /* Interface */,
+				F3C7914A25CD5FED00E3023A /* Support */,
+				F3C7914925CD5FE000E3023A /* Entity */,
+				F3C7913525CD55BF00E3023A /* Assets.xcassets */,
+				F3C7913725CD55BF00E3023A /* Info.plist */,
+			);
+			path = "ImageSearch-watchOS WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		F3C7914725CD5FCD00E3023A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7912F25CD55BE00E3023A /* SearchInterfaceController.swift */,
+				F3C7914B25CD601B00E3023A /* SearchInterfaceModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F3C7914825CD5FD800E3023A /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				F367A4FA25CDDB480081ED3E /* FavoritesInterfaceController.swift */,
+				F367A52025CDE9350081ED3E /* FavoritesInterfaceModel.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		F3C7914925CD5FE000E3023A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7914525CD58AC00E3023A /* TableCellObject.swift */,
+				F3C7915025CDD39700E3023A /* ReceivedData.swift */,
+				F3C7915225CDD3AA00E3023A /* SearchData.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F3C7914A25CD5FED00E3023A /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7913125CD55BE00E3023A /* ExtensionDelegate.swift */,
+				F3C7913325CD55BE00E3023A /* ComplicationController.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F3C7914F25CDD37E00E3023A /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7914725CD5FCD00E3023A /* Search */,
+				F3C7914825CD5FD800E3023A /* Favorites */,
+				F367A4E925CDDA0F0081ED3E /* Detail */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3C7910625CD55BC00E3023A /* ImageSearch-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C7914225CD55BF00E3023A /* Build configuration list for PBXNativeTarget "ImageSearch-watchOS" */;
+			buildPhases = (
+				B9E38F4140AD2AB6EF191380 /* [CP] Check Pods Manifest.lock */,
+				F3C7910325CD55BC00E3023A /* Sources */,
+				F3C7910425CD55BC00E3023A /* Frameworks */,
+				F3C7910525CD55BC00E3023A /* Resources */,
+				F3C7914125CD55BF00E3023A /* Embed Watch Content */,
+				E9AE9D555DEB3755E5896772 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3C7911E25CD55BD00E3023A /* PBXTargetDependency */,
+			);
+			name = "ImageSearch-watchOS";
+			productName = "ImageSearch-watchOS";
+			productReference = F3C7910725CD55BC00E3023A /* ImageSearch-watchOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3C7911A25CD55BD00E3023A /* ImageSearch-watchOS WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C7913E25CD55BF00E3023A /* Build configuration list for PBXNativeTarget "ImageSearch-watchOS WatchKit App" */;
+			buildPhases = (
+				FB65F6B21F19AE1E50D2BEE5 /* [CP] Check Pods Manifest.lock */,
+				F3C7911925CD55BD00E3023A /* Resources */,
+				F3C7913D25CD55BF00E3023A /* Embed App Extensions */,
+				BF35965AF27A8035899314A9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3C7912D25CD55BE00E3023A /* PBXTargetDependency */,
+			);
+			name = "ImageSearch-watchOS WatchKit App";
+			productName = "ImageSearch-watchOS WatchKit App";
+			productReference = F3C7911B25CD55BD00E3023A /* ImageSearch-watchOS WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F3C7912925CD55BE00E3023A /* ImageSearch-watchOS WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C7913A25CD55BF00E3023A /* Build configuration list for PBXNativeTarget "ImageSearch-watchOS WatchKit Extension" */;
+			buildPhases = (
+				0EB35A188BCB452752915697 /* [CP] Check Pods Manifest.lock */,
+				F3C7912625CD55BE00E3023A /* Sources */,
+				F3C7912725CD55BE00E3023A /* Frameworks */,
+				F3C7912825CD55BE00E3023A /* Resources */,
+				B2C8BD8144C9AEBE7E01C7F6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ImageSearch-watchOS WatchKit Extension";
+			productName = "ImageSearch-watchOS WatchKit Extension";
+			productReference = F3C7912A25CD55BE00E3023A /* ImageSearch-watchOS WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3C790FF25CD55BB00E3023A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					F3C7910625CD55BC00E3023A = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					F3C7911A25CD55BD00E3023A = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					F3C7912925CD55BE00E3023A = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = F3C7910225CD55BB00E3023A /* Build configuration list for PBXProject "ImageSearch-watchOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3C790FE25CD55BB00E3023A;
+			productRefGroup = F3C7910825CD55BC00E3023A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3C7910625CD55BC00E3023A /* ImageSearch-watchOS */,
+				F3C7911A25CD55BD00E3023A /* ImageSearch-watchOS WatchKit App */,
+				F3C7912925CD55BE00E3023A /* ImageSearch-watchOS WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3C7910525CD55BC00E3023A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C7911725CD55BD00E3023A /* LaunchScreen.storyboard in Resources */,
+				F3C7911425CD55BD00E3023A /* Assets.xcassets in Resources */,
+				F3C7911225CD55BC00E3023A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C7911925CD55BD00E3023A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C7912425CD55BE00E3023A /* Assets.xcassets in Resources */,
+				F3C7912225CD55BD00E3023A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C7912825CD55BE00E3023A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C7913625CD55BF00E3023A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EB35A188BCB452752915697 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageSearch-watchOS WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2C8BD8144C9AEBE7E01C7F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageSearch-watchOS WatchKit Extension/Pods-ImageSearch-watchOS WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageSearch-watchOS WatchKit Extension/Pods-ImageSearch-watchOS WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageSearch-watchOS WatchKit Extension/Pods-ImageSearch-watchOS WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9E38F4140AD2AB6EF191380 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageSearch-watchOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9AE9D555DEB3755E5896772 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageSearch-watchOS/Pods-ImageSearch-watchOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageSearch-watchOS/Pods-ImageSearch-watchOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageSearch-watchOS/Pods-ImageSearch-watchOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB65F6B21F19AE1E50D2BEE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageSearch-watchOS WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3C7910325CD55BC00E3023A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C7910F25CD55BC00E3023A /* HistoryViewController.swift in Sources */,
+				F3C7910B25CD55BC00E3023A /* AppDelegate.swift in Sources */,
+				F3C7910D25CD55BC00E3023A /* SceneDelegate.swift in Sources */,
+				F367A52B25CDED3E0081ED3E /* WCModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C7912625CD55BE00E3023A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C7913225CD55BE00E3023A /* ExtensionDelegate.swift in Sources */,
+				F3C7914C25CD601B00E3023A /* SearchInterfaceModel.swift in Sources */,
+				F3C7913025CD55BE00E3023A /* SearchInterfaceController.swift in Sources */,
+				F3C7915325CDD3AA00E3023A /* SearchData.swift in Sources */,
+				F367A50325CDDB580081ED3E /* DetailInterfaceController.swift in Sources */,
+				F367A50E25CDDE080081ED3E /* UserDefaults+Objects.swift in Sources */,
+				F367A50825CDDDD10081ED3E /* FavoritesModel.swift in Sources */,
+				F3C7914E25CD602D00E3023A /* SearchModel.swift in Sources */,
+				F3C7915125CDD39700E3023A /* ReceivedData.swift in Sources */,
+				F3C7913425CD55BE00E3023A /* ComplicationController.swift in Sources */,
+				F367A4FB25CDDB480081ED3E /* FavoritesInterfaceController.swift in Sources */,
+				F367A53625CDEE710081ED3E /* WCModel.swift in Sources */,
+				F367A52125CDE9350081ED3E /* FavoritesInterfaceModel.swift in Sources */,
+				F3C7914625CD58AC00E3023A /* TableCellObject.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3C7911E25CD55BD00E3023A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3C7911A25CD55BD00E3023A /* ImageSearch-watchOS WatchKit App */;
+			targetProxy = F3C7911D25CD55BD00E3023A /* PBXContainerItemProxy */;
+		};
+		F3C7912D25CD55BE00E3023A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3C7912925CD55BE00E3023A /* ImageSearch-watchOS WatchKit Extension */;
+			targetProxy = F3C7912C25CD55BE00E3023A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3C7911025CD55BC00E3023A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3C7911125CD55BC00E3023A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F3C7911525CD55BD00E3023A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3C7911625CD55BD00E3023A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F3C7912025CD55BD00E3023A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3C7912125CD55BD00E3023A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3C7913825CD55BF00E3023A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3C7913925CD55BF00E3023A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F3C7913B25CD55BF00E3023A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47D6735E90A07079FDF0FC05 /* Pods-ImageSearch-watchOS WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Q9SP4M9H4;
+				INFOPLIST_FILE = "ImageSearch-watchOS WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pookjw.ImageSearch-watchOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		F3C7913C25CD55BF00E3023A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B64862E46EBBD0102B57410 /* Pods-ImageSearch-watchOS WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Q9SP4M9H4;
+				INFOPLIST_FILE = "ImageSearch-watchOS WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pookjw.ImageSearch-watchOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		F3C7913F25CD55BF00E3023A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 389BC08720BC55281A7BD186 /* Pods-ImageSearch-watchOS WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Q9SP4M9H4;
+				IBSC_MODULE = ImageSearch_watchOS_WatchKit_Extension;
+				INFOPLIST_FILE = "ImageSearch-watchOS WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pookjw.ImageSearch-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		F3C7914025CD55BF00E3023A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C7F6B3606EE74481360AC1D /* Pods-ImageSearch-watchOS WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Q9SP4M9H4;
+				IBSC_MODULE = ImageSearch_watchOS_WatchKit_Extension;
+				INFOPLIST_FILE = "ImageSearch-watchOS WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pookjw.ImageSearch-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		F3C7914325CD55BF00E3023A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68FEF8F0BE918ACAAB50A1CA /* Pods-ImageSearch-watchOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Q9SP4M9H4;
+				INFOPLIST_FILE = "ImageSearch-watchOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pookjw.ImageSearch-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3C7914425CD55BF00E3023A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8244FC2F14268341ACBA886 /* Pods-ImageSearch-watchOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Q9SP4M9H4;
+				INFOPLIST_FILE = "ImageSearch-watchOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pookjw.ImageSearch-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3C7910225CD55BB00E3023A /* Build configuration list for PBXProject "ImageSearch-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C7913825CD55BF00E3023A /* Debug */,
+				F3C7913925CD55BF00E3023A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3C7913A25CD55BF00E3023A /* Build configuration list for PBXNativeTarget "ImageSearch-watchOS WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C7913B25CD55BF00E3023A /* Debug */,
+				F3C7913C25CD55BF00E3023A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3C7913E25CD55BF00E3023A /* Build configuration list for PBXNativeTarget "ImageSearch-watchOS WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C7913F25CD55BF00E3023A /* Debug */,
+				F3C7914025CD55BF00E3023A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3C7914225CD55BF00E3023A /* Build configuration list for PBXNativeTarget "ImageSearch-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C7914325CD55BF00E3023A /* Debug */,
+				F3C7914425CD55BF00E3023A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3C790FF25CD55BB00E3023A /* Project object */;
+}
