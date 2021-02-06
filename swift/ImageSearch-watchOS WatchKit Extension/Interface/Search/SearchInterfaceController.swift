@@ -26,7 +26,7 @@ final class SearchInterfaceController: WKInterfaceController {
         viewModel.reloadTableViewEvent
             .withUnretained(self)
             .drive { (weakSelf, arrayData) in
-                weakSelf.tableView.setNumberOfRows(arrayData.count, withRowType: SearchInterfaceModel.Const.cellIdentifier)
+                weakSelf.tableView.setNumberOfRows(arrayData.count, withRowType: SearchInterfaceModel.Const.cellReuseIdentifier)
                 for (idx, data) in arrayData.enumerated() {
                     guard let object: TableCellObject = weakSelf.tableView.rowController(at: idx) as? TableCellObject else { return }
                     object.configure(data)

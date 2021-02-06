@@ -10,18 +10,20 @@ import WatchConnectivity
 import RxSwift
 
 final class WCModel: NSObject, WCSessionDelegate {
-    public var userInfo: BehaviorSubject<[AnyHashable: Any]> = .init(value: [:])
-    public var userInfoSource: [AnyHashable: Any] {
+    public var context: BehaviorSubject<[String: Any]> = .init(value: [:])
+    public var contextSource: [String: Any] {
         get {
-            return (try? userInfo.value()) ?? [:]
+            return (try? context.value()) ?? [:]
         }
         set {
-            sendUserInfo(newValue, save: false)
+            sendContext(newValue)
         }
     }
     public static let shared: WCModel = .init()
     
     private let userDefaults: UserDefaults = .standard
+    private let session: WCSession = .default
+    
     private struct Const {
         static let userDefaultsKey: String = "WCModelData"
     }
@@ -29,30 +31,42 @@ final class WCModel: NSObject, WCSessionDelegate {
     private override init() {
         super.init()
         if WCSession.isSupported() {
-            let session: WCSession = .default
             session.delegate = self
-            session.activate()
         }
         loadUserDefaults()
     }
     
-    public func sendUserInfo(_ userInfo: [AnyHashable: Any], save: Bool = true) {
-        print("Sending userInfo... \(userInfo)")
-        self.userInfo.onNext(userInfo)
-        if save {
-            saveUserDefaults()
+    public func activateIfSupported() {
+        if WCSession.isSupported() {
+            session.activate()
         }
+    }
+    
+    public func sendContext(_ context: [String: Any]) {
+        print("Sending context... \(context)")
+        if session.activationState == .activated {
+            do {
+                try session.updateApplicationContext(context)
+            } catch {
+                print("Alert! Updating app context failed \(error.localizedDescription)")
+            }
+        } else {
+            print("Alert! WCSession is not activated.")
+        }
+        
+        self.context.onNext(context)
+        saveUserDefaults()
     }
     
     private func saveUserDefaults() {
-        userDefaults.setValue(userInfoSource, forKey: Const.userDefaultsKey)
+        userDefaults.set(contextSource, forKey: Const.userDefaultsKey)
     }
     
     private func loadUserDefaults() {
-        guard let value: [AnyHashable: Any] = userDefaults.value(forKey: Const.userDefaultsKey) as? [AnyHashable: Any] else {
+        guard let value: [String: Any] = userDefaults.dictionary(forKey: Const.userDefaultsKey) else {
             return
         }
-        userInfo.onNext(value)
+        context.onNext(value)
     }
     
     // MARK: - WCSessionDelegate
@@ -60,9 +74,10 @@ final class WCModel: NSObject, WCSessionDelegate {
         print("Session Status: \(session), Error: \(String(describing: error?.localizedDescription))")
     }
     
-    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        print("Received context: \(applicationContext)")
         DispatchQueue.main.async { [weak self] in
-            self?.userInfo.onNext(userInfo)
+            self?.sendContext(applicationContext)
         }
     }
     
@@ -74,7 +89,7 @@ final class WCModel: NSObject, WCSessionDelegate {
     
     #if os(iOS)
     func sessionDidDeactivate(_ session: WCSession) {
-        WCSession.default.activate()
+        session.activate()
     }
     #endif
 }

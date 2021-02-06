@@ -17,6 +17,8 @@
 		F367A52125CDE9350081ED3E /* FavoritesInterfaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367A52025CDE9350081ED3E /* FavoritesInterfaceModel.swift */; };
 		F367A52B25CDED3E0081ED3E /* WCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367A52A25CDED3E0081ED3E /* WCModel.swift */; };
 		F367A53625CDEE710081ED3E /* WCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367A52A25CDED3E0081ED3E /* WCModel.swift */; };
+		F367A57725CDFE5D0081ED3E /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367A57625CDFE5D0081ED3E /* HistoryViewModel.swift */; };
+		F367A58025CDFE790081ED3E /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367A57F25CDFE790081ED3E /* HistoryModel.swift */; };
 		F3C7910B25CD55BC00E3023A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7910A25CD55BC00E3023A /* AppDelegate.swift */; };
 		F3C7910D25CD55BC00E3023A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7910C25CD55BC00E3023A /* SceneDelegate.swift */; };
 		F3C7910F25CD55BC00E3023A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7910E25CD55BC00E3023A /* HistoryViewController.swift */; };
@@ -96,6 +98,8 @@
 		F367A50D25CDDE080081ED3E /* UserDefaults+Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Objects.swift"; sourceTree = "<group>"; };
 		F367A52025CDE9350081ED3E /* FavoritesInterfaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInterfaceModel.swift; sourceTree = "<group>"; };
 		F367A52A25CDED3E0081ED3E /* WCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCModel.swift; sourceTree = "<group>"; };
+		F367A57625CDFE5D0081ED3E /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		F367A57F25CDFE790081ED3E /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		F3C7910725CD55BC00E3023A /* ImageSearch-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ImageSearch-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C7910A25CD55BC00E3023A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C7910C25CD55BC00E3023A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +202,34 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F367A57125CDFDFE0081ED3E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7910A25CD55BC00E3023A /* AppDelegate.swift */,
+				F3C7910C25CD55BC00E3023A /* SceneDelegate.swift */,
+				F3C7911025CD55BC00E3023A /* Main.storyboard */,
+				F3C7911525CD55BD00E3023A /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F367A57525CDFE440081ED3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7910E25CD55BC00E3023A /* HistoryViewController.swift */,
+				F367A57625CDFE5D0081ED3E /* HistoryViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F367A57E25CDFE650081ED3E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F367A57F25CDFE790081ED3E /* HistoryModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		F3C790FE25CD55BB00E3023A = {
 			isa = PBXGroup;
 			children = (
@@ -223,12 +255,10 @@
 		F3C7910925CD55BC00E3023A /* ImageSearch-watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				F3C7910A25CD55BC00E3023A /* AppDelegate.swift */,
-				F3C7910C25CD55BC00E3023A /* SceneDelegate.swift */,
-				F3C7910E25CD55BC00E3023A /* HistoryViewController.swift */,
-				F3C7911025CD55BC00E3023A /* Main.storyboard */,
+				F367A57525CDFE440081ED3E /* View */,
+				F367A57125CDFDFE0081ED3E /* Support */,
+				F367A57E25CDFE650081ED3E /* Entity */,
 				F3C7911325CD55BD00E3023A /* Assets.xcassets */,
-				F3C7911525CD55BD00E3023A /* LaunchScreen.storyboard */,
 				F3C7911825CD55BD00E3023A /* Info.plist */,
 			);
 			path = "ImageSearch-watchOS";
@@ -545,7 +575,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F367A57725CDFE5D0081ED3E /* HistoryViewModel.swift in Sources */,
 				F3C7910F25CD55BC00E3023A /* HistoryViewController.swift in Sources */,
+				F367A58025CDFE790081ED3E /* HistoryModel.swift in Sources */,
 				F3C7910B25CD55BC00E3023A /* AppDelegate.swift in Sources */,
 				F3C7910D25CD55BC00E3023A /* SceneDelegate.swift in Sources */,
 				F367A52B25CDED3E0081ED3E /* WCModel.swift in Sources */,

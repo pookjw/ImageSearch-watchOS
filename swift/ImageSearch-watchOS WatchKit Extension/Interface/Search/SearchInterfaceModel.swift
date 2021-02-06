@@ -11,7 +11,7 @@ import RxCocoa
 
 final class SearchInterfaceModel {
     public struct Const {
-        static let cellIdentifier: String = "ListCell"
+        static let cellReuseIdentifier: String = "ListCell"
     }
     
     public var reloadTableViewEvent: Driver<[SearchData]>
@@ -31,11 +31,16 @@ final class SearchInterfaceModel {
         SearchModel.shared.request(text: text)
         
         let key: String = "search_history"
-        var userInfo: [AnyHashable: Any] = WCModel.shared.userInfoSource
-        var history: [String] = (userInfo[key] as? [String]) ?? []
-        history.append(text)
-        userInfo[key] = history
-        WCModel.shared.sendUserInfo(userInfo)
+        var context: [String: Any] = WCModel.shared.contextSource
+        var history: [String: String] = (context[key] as? [String: String]) ?? [:]
+        
+        let dateFormatter: DateFormatter = .init()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateString: String = dateFormatter.string(from: Date())
+        history[dateString] = text
+        
+        context[key] = history
+        WCModel.shared.sendContext(context)
     }
     
     public func toggleFavorite(_ searchData: SearchData) {
